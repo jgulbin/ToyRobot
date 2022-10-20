@@ -26,7 +26,7 @@ Use these instructions to get the project up and running.
 You will need .NET 6 SDK or runtime:
 - [.Net 6 or later](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
-### Installing
+### Installing and Running the Application
 Follow these steps:
 1. Clone the repository
 ```csharp
