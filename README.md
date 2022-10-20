@@ -23,12 +23,12 @@ All commands should provide output indicating whether or not they succeeded.
 ## Getting Started
 Use these instructions to get the project up and running.
 ### Prerequisites
-You will need .NET 6 SDK or runtime:
+You will need .NET 6 SDK:
 - [.Net 6 or later](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
 ### Installing and Running the Application
 Follow these steps:
-1. Clone the repository
+1. Clone the repository by using the git clone command along with the url. You need to download Git to run this command [Git](https://git-scm.com/downloads).
 ```csharp
 git clone https://github.com/jgulbin/ToyRobot.git
 ```
