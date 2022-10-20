@@ -40,9 +40,8 @@ Instructions:
 ENTER A COMMAND:";
 
             ITableSurface tableSurface = new TableSurface(5, 5);
-            ICommandHandler commandHandler = new CommandHandler();
-
-            IRobot robot = new Robot(tableSurface, commandHandler);
+            IRobot robot = new Robot();
+            ICommandHandler commandHandler = new CommandHandler(robot, tableSurface);
 
             var stopApplication = false;
             Console.WriteLine(description);
@@ -60,7 +59,7 @@ ENTER A COMMAND:";
                 {
                     try
                     {
-                        var result = robot.ExecuteCommand(command);
+                        var result = commandHandler.ExecuteCommand(command);
                         if (!String.IsNullOrEmpty(result))
                             Console.WriteLine(result);
                     }

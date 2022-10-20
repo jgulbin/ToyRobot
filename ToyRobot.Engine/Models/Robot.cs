@@ -13,49 +13,7 @@ namespace ToyRobot.Engine.Models
     {
         public Location Location { get; set; }
         public Direction Direction { get; set; }
-        public ITableSurface TableSurface { get; }
-        public ICommandHandler CommandHandler { get; }
-        public Robot(ITableSurface tableSurface, ICommandHandler commandHandler)
-        {
-            TableSurface = tableSurface;
-            CommandHandler = commandHandler;
-        }
-
-        public string ExecuteCommand(string cmd)
-        {
-            var command = CommandHandler.GetCommand(cmd.Split(' '));
-            if (command != Command.PLACE && Location == null) return null;
-
-            switch (command)
-            {
-                case Command.PLACE:
-                    var placement = CommandHandler.GetPlacement(cmd.Split(' '));
-                    if (TableSurface.IsLocationValid(placement.Location))
-                        Place(placement.Location, placement.Direction);
-                    break;
-                case Command.MOVE:
-                    var newLocation = GetNextLocation();
-                    if (TableSurface.IsLocationValid(newLocation))
-                        Location = newLocation;
-                    break;
-                case Command.LEFT:
-                    RotateLeft();
-                    break;
-                case Command.RIGHT:
-                    RotateRight();
-                    break;
-                case Command.REPORT:
-                    return GetOutput();
-            }
-
-            return string.Empty;
-
-        }
-
-        public string GetOutput()
-        {
-            return string.Format("Output: {0},{1},{2}", Location.X, Location.Y, Direction.ToString().ToUpper());
-        }
+       
 
         public void Place(Location location, Direction direction)
         {

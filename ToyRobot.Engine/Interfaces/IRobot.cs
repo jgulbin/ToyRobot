@@ -12,7 +12,11 @@ namespace ToyRobot.Engine.Interfaces
     {
         public Location Location { get; set; }
         public Direction Direction { get; set; }
-        public string ExecuteCommand(string cmd);
+        void Place(Location location, Direction direction);
+        Location GetNextLocation();
+        void RotateLeft();
+        void RotateRight();
+        void Rotate(int rotationNumber);
 
     }
 }

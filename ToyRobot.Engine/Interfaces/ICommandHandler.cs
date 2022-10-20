@@ -10,7 +10,6 @@ namespace ToyRobot.Engine.Interfaces
 {
     public interface ICommandHandler
     {
-        Command GetCommand(string[] cmd);
-        Placement GetPlacement(string[] args);
+        string ExecuteCommand(string cmd);
     }
 }
