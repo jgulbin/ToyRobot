@@ -8,12 +8,12 @@ namespace ToyRobot.Simulator
     {
         static void Main(string[] args)
         {
-            var description = @"
+            var description = @$"
 **********************************************************************
-*                                                                    *
-*                        WELCOME!                                    *
-*                 TOY ROBOT SIMULATOR v1.0                           *  
-*                                                                    *
+                                                                     
+                         Hi, {Environment.UserName}!            
+                  Welcome to TOY ROBOT SIMULATOR v1.0                            
+                                                                    
 **********************************************************************
 
 Instructions:
