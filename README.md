@@ -21,7 +21,6 @@ All commands should provide output indicating whether or not they succeeded.
 -- Outputs the robot's current location on the tabletop and the direction it is facing.
 
 ## Getting Started
----
 Use these instructions to get the project up and running.
 ### Prerequisites
 You will need .NET 6 SDK or runtime:
